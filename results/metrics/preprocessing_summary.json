@@ -1,0 +1,17 @@
+{
+    "original_samples": 50257,
+    "train_samples": 35199,
+    "val_samples": 7519,
+    "test_samples": 7539,
+    "original_vocab_size": 138578,
+    "cleaned_vocab_size": 71004,
+    "label_mapping": {
+        "Anxiety": 0,
+        "Bipolar": 1,
+        "Depression": 2,
+        "Normal": 3,
+        "Personality disorder": 4,
+        "Stress": 5,
+        "Suicidal": 6
+    }
+}

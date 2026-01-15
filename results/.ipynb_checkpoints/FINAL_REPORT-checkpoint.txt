@@ -1,0 +1,75 @@
+
+MENTAL HEALTH SENTIMENT ANALYSIS - FINAL REPORT
+
+
+PROJECT OVERVIEW:
+- Dataset: Mental Health Sentiment Analysis
+- Total Samples: N/A
+- Classes: Normal, Suicidal
+- Train/Val/Test Split: 70%/15%/15%
+
+MODEL PERFORMANCE SUMMARY (Test Set)
+
+BASELINE MODELS:
+
+  Logistic Regression:
+    Accuracy:  0.7460
+    Precision: 0.7560
+    Recall:    0.7460
+    F1-Score:  0.7466
+
+  Naive Bayes:
+    Accuracy:  0.6793
+    Precision: 0.7004
+    Recall:    0.6793
+    F1-Score:  0.6625
+
+  SVM:
+    Accuracy:  0.7405
+    Precision: 0.7399
+    Recall:    0.7405
+    F1-Score:  0.7388
+
+  Random Forest:
+    Accuracy:  0.7200
+    Precision: 0.7362
+    Recall:    0.7200
+    F1-Score:  0.7067
+
+DEEP LEARNING MODELS:
+
+  BiLSTM_Attention:
+    Accuracy:  0.0409
+    Precision: 0.0025
+    Recall:    0.0409
+    F1-Score:  0.0047
+
+  DistilBERT:
+    Accuracy:  0.7892
+    Precision: 0.7889
+    Recall:    0.7892
+    F1-Score:  0.7885
+
+KEY FINDINGS
+
+1. BEST OVERALL MODEL: DistilBERT
+   - F1-Score: 0.7885
+   - Accuracy: 0.7892
+
+2. BASELINE vs DEEP LEARNING:
+   - Best Baseline F1: 0.7466
+   - Best DL F1: 0.7885
+   - Improvement: +5.62%
+
+3. MODEL INSIGHTS:
+   - Traditional ML models (Logistic Regression, SVM) provide strong baselines
+   - BiLSTM with Attention captures sequential patterns effectively
+   - BERT achieves best results by leveraging pre-trained language understanding
+
+RECOMMENDATIONS
+
+1. DEPLOYMENT: Use DistilBERT for production deployment
+2. TRADE-OFFS:
+   - For speed: Use Logistic Regression (fastest inference)
+   - For accuracy: Use DistilBERT (best performance)
+

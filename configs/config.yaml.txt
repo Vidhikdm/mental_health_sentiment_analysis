@@ -1,0 +1,64 @@
+# Mental Health Sentiment Analysis Configuration
+
+# Data paths
+data:
+  raw_path: "data/raw/Combined Data.csv"
+  processed_path: "data/processed/processed_data.csv"
+  train_path: "data/processed/train.csv"
+  val_path: "data/processed/val.csv"
+  test_path: "data/processed/test.csv"
+
+# Text preprocessing
+preprocessing:
+  max_length: 128
+  remove_stopwords: true
+  lemmatize: true
+  remove_urls: true
+  remove_mentions: true
+  remove_special_chars: true
+  lowercase: true
+
+# Model configurations
+models:
+  lstm:
+    embedding_dim: 100
+    hidden_dim: 128
+    num_layers: 2
+    dropout: 0.3
+    bidirectional: true
+  
+  cnn_lstm:
+    embedding_dim: 100
+    num_filters: 128
+    filter_sizes: [3, 4, 5]
+    lstm_hidden: 128
+    dropout: 0.3
+  
+  bert:
+    model_name: "distilbert-base-uncased"
+    max_length: 128
+    learning_rate: 2e-5
+    warmup_steps: 500
+
+# Training parameters
+training:
+  batch_size: 32
+  epochs: 10
+  learning_rate: 0.001
+  weight_decay: 1e-5
+  early_stopping_patience: 3
+  validation_split: 0.15
+  test_split: 0.15
+  random_seed: 42
+
+# Hardware
+hardware:
+  device: "cuda"  # or "cpu"
+  num_workers: 4
+
+# Paths
+paths:
+  models_dir: "models/"
+  results_dir: "results/"
+  figures_dir: "results/figures/"
+  metrics_dir: "results/metrics/"
