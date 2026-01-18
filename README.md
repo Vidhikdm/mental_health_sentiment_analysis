@@ -1,21 +1,17 @@
 # Mental Health Sentiment Analysis: A Deep Learning Approach to Understanding Crisis Communication
 
 <div align="center">
-  <img src="images/mental_health_header.jpeg" alt="Mental Health Matters" width="600">
+  <img src="images/mental_health_header.jpeg" alt="Mental Health Matters" width="700">
 </div>
 
-<h1 align="center">Mental Health Sentiment Analysis</h1>
-  
 ---
 
 ## Why This Matters
+Every 40 seconds, someone loses their life to suicide. Behind each statistic is a person who struggled in silence, often leaving digital traces of their pain in the words they wrote.
 
-Every 40 seconds, someone loses their life to suicide. Behind each statistic is a person who struggled in silence, often leaving digital traces of their pain in the words they wrote. **What if we could recognize these signals earlier?**
+This project isn't just about achieving high accuracy on a dataset—it's about exploring whether AI can help identify patterns in language that might indicate someone is in crisis.
 
-This project isn't just about achieving high accuracy on a dataset—it's about exploring whether AI can help identify patterns in language that might indicate someone is in crisis. While this is purely a research and educational exploration, it touches on something deeply human: **our ability to understand and respond to emotional distress**.
-
-I built this because I believe that understanding the intersection of natural language processing and mental health could contribute to broader efforts in crisis intervention, though any real-world application would require careful ethical consideration and professional mental health expertise.
-
+I built this because I believe that understanding the intersection of natural language processing and mental health could contribute to broader efforts in crisis intervention, while recognizing that any real-world application requires ethical oversight and professional expertise.
 ---
 
 ## The Challenge
@@ -161,36 +157,38 @@ My model can flag concerning language patterns. It **cannot** diagnose, treat, o
 
 ## Project Structure
 
-```
+```text
 mental_health_sentiment_analysis/
 │
 ├── notebooks/                          # Jupyter notebooks with full analysis
-│   ├── 01_data_exploration.ipynb         ├─ Dataset statistics & visualization
-│   ├── 02_preprocessing.ipynb            ├─ Text cleaning pipeline
-│   ├── 03_baseline_models.ipynb          ├─ Traditional ML experiments
-│   ├── 04_advanced_models.ipynb          ├─ BiLSTM & DistilBERT training
-│   └── 05_results_analysis.ipynb         └─ Model comparison & evaluation
+│   ├── 01_data_exploration.ipynb        # Dataset statistics & visualization
+│   ├── 02_preprocessing.ipynb           # Text cleaning pipeline
+│   ├── 03_baseline_models.ipynb          # Traditional ML experiments
+│   ├── 04_advanced_models.ipynb          # BiLSTM & DistilBERT training
+│   └── 05_results_analysis.ipynb         # Model comparison & evaluation
 │
 ├── data/
-│   ├── raw/Combined Data.csv             ├─ Original dataset (31.5 MB)
-│   └── processed/                        └─ Train/val/test splits
+│   ├── raw/
+│   │   └── Combined Data.csv             # Original dataset (31.5 MB)
+│   └── processed/                        # Train/val/test splits
 │
-├── models/                             # Saved model checkpoints
-│   ├── label_encoder.pkl
-│   ├── tfidf_vectorizer.pkl
-│   ├── best_baseline_model.pkl
-│   ├── bilstm_attention.pth
-│   └── bert_model/
+├── models/                              # Saved model checkpoints (not tracked)
+│   └── (excluded via .gitignore)
 │
-├── results/                            # Figures & metrics
-│   ├── figures/                          ├─ Confusion matrices, training curves
-│   ├── metrics/                          └─ JSON files with performance data
+├── results/
+│   ├── figures/                          # Confusion matrices, training curves
+│   ├── metrics/                          # JSON files with performance data
 │   └── FINAL_REPORT.txt
 │
-├── requirements.txt                    # Python dependencies
-├── configs/config.yaml                 # Hyperparameters & paths
-└── README.md                           # You are here
-```
+├── images/
+│   └── mental_health_header.jpeg         # README header image
+│
+├── configs/
+│   └── config.yaml                       # Hyperparameters & paths
+│
+├── requirements.txt                     # Python dependencies
+├── LICENSE
+└── README.md                            
 
 ---
 
