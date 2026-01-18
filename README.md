@@ -350,10 +350,10 @@ This project is open-source for **research and educational purposes**. Any real-
 
 ## Contact
 
-**Author**: Vidhi Rajendra Kadam  
-**Email**: vidhi.kadam1501@gmail.com  
-**GitHub**: https://github.com/Vidhikdm 
-**LinkedIn**: https://www.linkedin.com/in/vidhikadam/
+- **Author:** Vidhi Rajendra Kadam
+- **Email:** vidhi.kadam1501@gmail.com
+- **GitHub:** https://github.com/Vidhikdm
+- **LinkedIn:** https://www.linkedin.com/in/vidhikadam/
 
 For academic inquiries, collaboration opportunities, or discussions about mental health NLP, feel free to reach out. I'm always interested in connecting with researchers working at the intersection of AI and social impact.
 
