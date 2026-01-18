@@ -1,7 +1,7 @@
 # Mental Health Sentiment Analysis: A Deep Learning Approach to Understanding Crisis Communication
 
 <div align="center">
-  <img src="images/mental_health_matters.png" alt="Mental Health Matters" width="600"/>
+  <img src="images/mental_health_header.jpeg" alt="Mental Health Matters" width="600">
 </div>
 
 <h1 align="center">Mental Health Sentiment Analysis</h1>
