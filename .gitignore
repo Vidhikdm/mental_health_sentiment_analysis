@@ -1,0 +1,17 @@
+# OS files
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data (large files)
+data/raw/*.csv
+data/processed/*.csv
+
+# Models (large binaries)
+models/*.pkl
+models/*.pth
+
+# Python
+__pycache__/
+*.pyc

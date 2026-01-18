@@ -171,13 +171,6 @@ mental_health_sentiment_analysis/
 │   ├── 04_advanced_models.ipynb          ├─ BiLSTM & DistilBERT training
 │   └── 05_results_analysis.ipynb         └─ Model comparison & evaluation
 │
-├── src/                                # Python modules (production-ready code)
-│   ├── data_loader.py                    ├─ Dataset loading utilities
-│   ├── preprocessing.py                  ├─ Text preprocessing pipeline
-│   ├── models.py                         ├─ PyTorch model architectures
-│   ├── train.py                          ├─ Training loops & utilities
-│   └── evaluate.py                       └─ Evaluation metrics & visualization
-│
 ├── data/
 │   ├── raw/Combined Data.csv             ├─ Original dataset (31.5 MB)
 │   └── processed/                        └─ Train/val/test splits
@@ -194,7 +187,6 @@ mental_health_sentiment_analysis/
 │   ├── metrics/                          └─ JSON files with performance data
 │   └── FINAL_REPORT.txt
 │
-├── Mental Health Report.pdf            # Background research (42 pages)
 ├── requirements.txt                    # Python dependencies
 ├── configs/config.yaml                 # Hyperparameters & paths
 └── README.md                           # You are here
@@ -239,21 +231,11 @@ python -c "import nltk; nltk.download('punkt'); nltk.download('stopwords'); nltk
 
 ### Run the Analysis
 
-**Option 1: Jupyter Notebooks** (Recommended for exploration)
+**Jupyter Notebooks** (Recommended for exploration)
 
 ```bash
 jupyter notebook
 # Open notebooks/01_data_exploration.ipynb and run sequentially
-```
-
-**Option 2: Python Scripts**
-
-```bash
-# Train DistilBERT model
-python src/train.py --model bert --epochs 3 --batch-size 16
-
-# Evaluate on test set
-python src/evaluate.py --model bert --checkpoint models/bert_model/
 ```
 
 ---
@@ -264,12 +246,12 @@ python src/evaluate.py --model bert --checkpoint models/bert_model/
 
 The model shows strong diagonal performance, with most confusion between semantically similar categories (Depression ↔ Stress, Anxiety ↔ Normal).
 
-| True \ Pred | Normal | Depression | Suicidal | Anxiety | Stress | Bipolar | Personality |
-|-------------|--------|------------|----------|---------|--------|---------|-------------|
-| **Normal** | 2054 | 146 | 28 | 32 | 15 | 8 | 2 |
-| **Depression** | 380 | 1375 | 301 | 98 | 62 | 28 | 10 |
-| **Suicidal** | 189 | 234 | 1129 | 18 | 12 | 5 | 3 |
-| **Anxiety** | 58 | 32 | 12 | 437 | 0 | 0 | 0 |
+| True \ Pred        | Normal | Depression | Suicidal | Anxiety | Stress | Bipolar | Personality  |
+|--------------------|--------|------------|----------|---------|--------|----------|-------------|
+| **Normal**         | 2054   | 146        | 28       | 32      | 15     | 8        | 2           |
+| **Depression**     | 380    | 1375       | 301      | 98      | 62     | 28       | 10          |
+| **Suicidal**       | 189    | 234        | 1129     | 18      | 12     | 5        | 3           |
+| **Anxiety**        | 58     | 32         | 12       | 437     | 0      | 0        | 0           |
 
 **Key observations**:
 - **Normal** statements: 90% precision (minimal false alarms)
