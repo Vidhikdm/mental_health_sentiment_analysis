@@ -15,6 +15,7 @@ Every 40 seconds, someone loses their life to suicide. Behind each statistic is 
 This project isn't just about achieving high accuracy on a dataset, it's about exploring whether AI can help identify patterns in language that might indicate someone is in crisis. While this is purely a research and educational exploration, it touches on something deeply human: **our ability to understand and respond to emotional distress**.
 
 I built this project because I believe that understanding the intersection of natural language processing and mental health can contribute to broader efforts in crisis awareness and early intervention. At the same time, this work acknowledges that any real-world application must be guided by strong ethical frameworks, human oversight, and the expertise of mental health professionals.
+
 ---
 
 ## The Challenge
