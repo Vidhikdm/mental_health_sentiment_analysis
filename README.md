@@ -1,17 +1,20 @@
 # Mental Health Sentiment Analysis: A Deep Learning Approach to Understanding Crisis Communication
 
 <div align="center">
-  <img src="images/mental_health_header.jpeg" alt="Mental Health Matters" width="700">
+  <img src="images/mental_health_header.jpeg" alt="Mental Health Matters" width="600">
 </div>
 
+<h1 align="center">Mental Health Sentiment Analysis</h1>
+  
 ---
 
 ## Why This Matters
-Every 40 seconds, someone loses their life to suicide. Behind each statistic is a person who struggled in silence, often leaving digital traces of their pain in the words they wrote.
 
-This project isn't just about achieving high accuracy on a dataset—it's about exploring whether AI can help identify patterns in language that might indicate someone is in crisis.
+Every 40 seconds, someone loses their life to suicide. Behind each statistic is a person who struggled in silence, often leaving digital traces of their pain in the words they wrote. **What if we could recognize these signals earlier?**
 
-I built this because I believe that understanding the intersection of natural language processing and mental health could contribute to broader efforts in crisis intervention, while recognizing that any real-world application requires ethical oversight and professional expertise.
+This project isn't just about achieving high accuracy on a dataset, it's about exploring whether AI can help identify patterns in language that might indicate someone is in crisis. While this is purely a research and educational exploration, it touches on something deeply human: **our ability to understand and respond to emotional distress**.
+
+I built this project because I believe that understanding the intersection of natural language processing and mental health can contribute to broader efforts in crisis awareness and early intervention. At the same time, this work acknowledges that any real-world application must be guided by strong ethical frameworks, human oversight, and the expertise of mental health professionals.
 ---
 
 ## The Challenge
@@ -157,38 +160,36 @@ My model can flag concerning language patterns. It **cannot** diagnose, treat, o
 
 ## Project Structure
 
-```text
+```
 mental_health_sentiment_analysis/
 │
 ├── notebooks/                          # Jupyter notebooks with full analysis
-│   ├── 01_data_exploration.ipynb        # Dataset statistics & visualization
-│   ├── 02_preprocessing.ipynb           # Text cleaning pipeline
-│   ├── 03_baseline_models.ipynb          # Traditional ML experiments
-│   ├── 04_advanced_models.ipynb          # BiLSTM & DistilBERT training
-│   └── 05_results_analysis.ipynb         # Model comparison & evaluation
+│   ├── 01_data_exploration.ipynb         ├─ Dataset statistics & visualization
+│   ├── 02_preprocessing.ipynb            ├─ Text cleaning pipeline
+│   ├── 03_baseline_models.ipynb          ├─ Traditional ML experiments
+│   ├── 04_advanced_models.ipynb          ├─ BiLSTM & DistilBERT training
+│   └── 05_results_analysis.ipynb         └─ Model comparison & evaluation
 │
 ├── data/
-│   ├── raw/
-│   │   └── Combined Data.csv             # Original dataset (31.5 MB)
-│   └── processed/                        # Train/val/test splits
+│   ├── raw/Combined Data.csv             ├─ Original dataset (31.5 MB)
+│   └── processed/                        └─ Train/val/test splits
 │
-├── models/                              # Saved model checkpoints (not tracked)
-│   └── (excluded via .gitignore)
+├── models/                             # Saved model checkpoints
+│   ├── label_encoder.pkl
+│   ├── tfidf_vectorizer.pkl
+│   ├── best_baseline_model.pkl
+│   ├── bilstm_attention.pth
+│   └── bert_model/
 │
-├── results/
-│   ├── figures/                          # Confusion matrices, training curves
-│   ├── metrics/                          # JSON files with performance data
+├── results/                            # Figures & metrics
+│   ├── figures/                          ├─ Confusion matrices, training curves
+│   ├── metrics/                          └─ JSON files with performance data
 │   └── FINAL_REPORT.txt
 │
-├── images/
-│   └── mental_health_header.jpeg         # README header image
-│
-├── configs/
-│   └── config.yaml                       # Hyperparameters & paths
-│
-├── requirements.txt                     # Python dependencies
-├── LICENSE
-└── README.md                            
+├── requirements.txt                    # Python dependencies
+├── configs/config.yaml                 # Hyperparameters & paths
+└── README.md                           # You are here
+```
 
 ---
 
@@ -347,7 +348,6 @@ This project is open-source for **research and educational purposes**. Any real-
 3. Include mental health professionals in design and deployment
 
 ---
-
 ## Contact
 
 - **Author:** Vidhi Rajendra Kadam
